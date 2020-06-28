@@ -1,0 +1,68 @@
+body {
+  font-family: "Franklin Gothic Book", sans-serif;
+  justify-content: center;
+  align-items: center;
+  background: #f4ebe5;
+  background-size: cover;
+  padding: 100px;
+}
+
+.row {
+  background: #ffffff;
+  padding: 50px 30px 50px 30px;
+}
+
+.column-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  font-size: 20px;
+}
+
+#todayT {
+  background: #f4ebe5;
+}
+
+#dateToday {
+  font-size: 25px;
+}
+
+#timeNow {
+  font-size: 25px;
+}
+
+#panel {
+  display: none;
+}
+
+.cities {
+  font-size: 18px;
+}
+
+#am,
+#pm,
+#work {
+  margin-bottom: 10px;
+}
+
+#timeZ {
+  margin-left: 20px;
+  border-collapse: collapse;
+}
+
+td,
+tr {
+  width: 800px;
+  padding-left: 30px;
+}
+
+.time1,
+.time2,
+.utc1,
+.utc2,
+.locationSet1,
+.locationSet2 {
+  font-style: italic;
+  padding-right: 40px;
+}

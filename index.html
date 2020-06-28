@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row rounded">
+      <div class="col-sm-4" id="infoToday">
+        <div class="shadow p-3 mb-5 mr-3 rounded" id="todayT">
+          <div id="dateToday"></div>
+          <span>
+            <h6><i>Date Today</i></h6>
+          </span>
+
+          <div id="timeNow"></div>
+          <span>
+            <h6><i>Local Time</i></h6>
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <h1 class="title"><strong>
+            When's the best time to meet?</strong>
+        </h1>
+        <h4 class="caption">Schedule a time when every one will be <i>happy</i> to meet! </h4>
+        <div class="column-form">
+          <form>
+            <div class="form-group">
+              <label for="meetingDate">Pick a Date <br>
+                <input type="date" id="meetingDateSet" min="2020-06-28">
+              </label>
+              <small id="meetingHelp" class="form-text text-muted">
+                <i>When would you like to meet?</i>
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="userLoc1">Your Location</label>
+              <select class="custom-select" id="userLocationSet1">
+                <option value="1" selected>Choose Location...</option>
+                <option value="Singapore">Singapore</option>
+                <option value="New York" disabled>New York</option>
+                <option value="San Francisco" disabled>San Francisco</option>
+                <option value="London" disabled>London</option>
+                <option value="Tokyo" disabled>Tokyo</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="userLoc2">Second Location</label>
+              <select class="custom-select" id="userLocationSet2">
+                <option value="2" selected>Choose Location...</option>
+                <option value="Singapore" disabled>Singapore</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="London">London</option>
+                <option value="Tokyo">Tokyo</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-info" onclick="showBestTime(event)">Show Best Time</button>
+            <button type="button" class="btn btn-warning" onclick="clearPage()"><b>Clear</b></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="row rounded" id="panel">
+      <div class="col">
+        <div class="col-results-header">
+          <div class="results-title" id="resultsTitle">
+            <h3>Compare Time Zones</h3>
+          </div>
+        </div>
+        <div class="results-body">
+          <table class="table table-hover table-sm table-borderless" id="localInfo">
+            <thead>
+              <tr>
+                <th scope="col"><b>Location</b></th>
+                <th scope="col">Local Date and Time</th>
+                <th scope="col">UTC Offset</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <th class="tag1" scope="row1">1</th>
+              <td class="time1">Select Location</td>
+              <td class="utc1">Select Location</td>
+              </tr>
+              <tr>
+                <th class="tag2" scope="row2">2</th>
+                <td class="time2">Select Location</td>
+                <td class="utc2">Select Location</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Best Time to Meet...</h4>
+        <span class="badge badge-success" id="work">Recommended</span>
+        <span class="badge badge-warning" id="am">Second Best</span>
+        <span class="badge badge-danger" id="pm">Try To Avoid</span>
+        <table class="table table-hover table-sm table-borderless" id="timezonesInfo">
+          <thead>
+            <tr class="cities">
+              <th class="locationSet1">Please Select Location</th>
+              <th class="locationSet2">Please Select Location</th>
+            </tr>
+          </thead>
+        </table>
+        <table id="sgNYC"></table>
+        <table id="sgTKY"></table>
+        <table id="sgSFO"></table>
+        <table id="sgLDO"></table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
