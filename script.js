@@ -32,14 +32,11 @@ startTime();
 
 // Calculate local time and date
 function calculateDateTime(offset) {
-  // get current local time in milliseconds
   var date = new Date();
   var localTime = date.getTime();
 
-  // get local timezone offset and convert to milliseconds
   var localOffset = date.getTimezoneOffset() * 60000;
 
-  // obtain the UTC time in milliseconds
   var utc = localTime + localOffset;
 
   var newDateTime = utc + 3600000 * offset;
@@ -169,17 +166,17 @@ function singaporeNYC() {
       cell2.innerHTML = i - 12 + ":00";
     }
 
-    // First case yellow if 6:00am - 8:00am
+    // yellow
     if ((i >= 0) & (i <= 8)) {
       row.style.backgroundColor = "#F8D347";
     }
 
-    // green if 9:00am - 9pm
+    // green
     if (i >= 9 && i <= 21) {
       row.style.backgroundColor = "#99C262";
     }
 
-    // if 10:00pm
+    // red
     if (i >= 22) {
       row.style.backgroundColor = "#FF6C60";
     }
@@ -210,12 +207,12 @@ function singaporeTKY() {
       row.style.backgroundColor = "#F8D347";
     }
 
-    //
+    // green
     if (i >= 9 && i <= 21) {
       row.style.backgroundColor = "#99C262";
     }
 
-    // if 10:00pm
+    // red
     if (i > 21) {
       row.style.backgroundColor = "#FF6C60";
     }
